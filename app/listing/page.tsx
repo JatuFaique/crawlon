@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { fetchProperties, fetchPropertyPages } from "../lib/data";
 import { Card } from "../ui/dashboard/cards";
 import Pagination from "../ui/invoices/pagination";
@@ -26,7 +27,9 @@ export default async function Page(props: {
             />
 
             <div className="mt-5 flex w-full justify-center">
-                <Pagination totalPages={totalPages} />
+                <Suspense>
+                    <Pagination totalPages={totalPages} />
+                </Suspense>
             </div>
         </div>
     );
