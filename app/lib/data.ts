@@ -97,8 +97,7 @@ export async function fetchFilteredProperties(
         price::text ILIKE ${`%${query}%`} OR
         beds::text ILIKE ${`%${query}%`} OR
         baths::text ILIKE ${`%${query}%`} OR
-        area::text ILIKE ${`%${query}%`} OR
-        status ILIKE ${`%${status}%`}
+        area::text ILIKE ${`%${query}%`}
       ORDER BY price ASC
       LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
     `;
