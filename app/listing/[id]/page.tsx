@@ -1,7 +1,8 @@
 import { updatePropertyFavoriteStatus } from "@/app/lib/actions";
 import { fetchPropertyById } from "@/app/lib/data";
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page(props: { params: Promise<{ id: string }> }) {
+    const params = await props.params;
     // Get the dynamic route parameters
     console.log(params?.id);
     const property = await fetchPropertyById(params.id);

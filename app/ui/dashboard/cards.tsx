@@ -17,7 +17,7 @@ export function Card({
     image: string[]; // URL to the product image
     id: string;
 }) {
-    console.log();
+    // @ts-ignore
     const handleRedirect = (id) => {
         // Redirect to the product details page
         redirect(`/listing/${id}`);
