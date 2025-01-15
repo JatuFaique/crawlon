@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+  .md\:w-68 {
+    width: 18rem;
+  }
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
